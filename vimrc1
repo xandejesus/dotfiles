@@ -1,6 +1,15 @@
+inoremap { {}<Left>
+inoremap {<CR> {<CR>}<Esc>0
+inoremap {{ {
+inoremap {} {}
+
 set autoindent
 set tabstop=4
 set shiftwidth=4
 syntax on
 set cindent
 set number
+autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -o %:r<CR>
+autocmd filetype cpp nnoremap <F10> :!%:r<CR>
+
+
