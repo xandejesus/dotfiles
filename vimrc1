@@ -1,7 +1,6 @@
-inoremap { {}<Left>
-inoremap {<CR> {<CR>}<Esc>0
-inoremap {{ {
-inoremap {} {}
+inoremap {<CR> {<CR>}<Up><Right><CR>
+:inoremap {{ {
+:inoremap {} {}
 
 set autoindent
 set tabstop=4
@@ -10,6 +9,18 @@ syntax on
 set cindent
 set number
 autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -o %:r<CR>
-autocmd filetype cpp nnoremap <F10> :!%:r<CR>
+autocmd filetype cpp nnoremap <F10> :!./%:r<CR>
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'python-syntax'
+call vundle#end()
+filetype plugin indent on
 
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_scope_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:python_highlight_all = 1
+colorscheme shades_of_purple
