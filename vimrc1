@@ -1,26 +1,43 @@
+set nocompatible
+filetype off
 inoremap {<CR> {<CR>}<Up><Right><CR>
+inoremap {<CR> {<CR>}<Esc>O
 :inoremap {{ {
 :inoremap {} {}
-
+:inoremap jj <Esc>
 set autoindent
 set tabstop=4
 set shiftwidth=4
 syntax on
+syntax enable
 set cindent
-set number
+set number relativenumber
 autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -o %:r<CR>
 autocmd filetype cpp nnoremap <F10> :!./%:r<CR>
+
+
+command We w <bar> e 
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-airline/vim-airline'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'python-syntax'
+Plugin 'Rigellute/shades-of-purple.vim'
 call vundle#end()
 filetype plugin indent on
+
+let g:airline_powerline_fonts = 1
 
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_scope_highlight = 1
 let g:cpp_class_decl_highlight = 1
 let g:python_highlight_all = 1
+
+"if (has("termguicolors"))
+"	 set termguicolors
+" endif
+
 colorscheme shades_of_purple
