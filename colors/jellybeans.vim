@@ -88,7 +88,7 @@ endif
 " - g:jellybeans_use_gui_italics    (default = 1)
 " - g:jellybeans_use_term_italics   (default = 0)
 
-let s:background_color = "151515"
+"let s:background_color = "151515"
 
 if exists("g:jellybeans_overrides")
   let s:overrides = g:jellybeans_overrides
@@ -96,31 +96,31 @@ else
   let s:overrides = {}
 endif
 
-" Backwards compatibility
-if exists("g:jellybeans_background_color")
-  \ || exists("g:jellybeans_background_color_256")
-  \ || exists("g:jellybeans_use_term_background_color")
-
-  let s:overrides = deepcopy(s:overrides)
-
-  if !has_key(s:overrides, "background")
-    let s:overrides["background"] = {}
-  endif
-
-  if exists("g:jellybeans_background_color")
-    let s:overrides["background"]["guibg"] = g:jellybeans_background_color
-  endif
-
-  if exists("g:jellybeans_background_color_256")
-    let s:overrides["background"]["256ctermbg"] = g:jellybeans_background_color_256
-  endif
-
-  if exists("g:jellybeans_use_term_background_color")
-    \ && g:jellybeans_use_term_background_color
-    let s:overrides["background"]["ctermbg"] = "NONE"
-    let s:overrides["background"]["256ctermbg"] = "NONE"
-  endif
-endif
+"" Backwards compatibility
+""if exists("g:jellybeans_background_color")
+""  \ || exists("g:jellybeans_background_color_256")
+""  \ || exists("g:jellybeans_use_term_background_color")
+"
+"  let s:overrides = deepcopy(s:overrides)
+"
+"  if !has_key(s:overrides, "background")
+"    let s:overrides["background"] = {}
+"  endif
+"
+"  if exists("g:jellybeans_background_color")
+"    let s:overrides["background"]["guibg"] = g:jellybeans_background_color
+"  endif
+"
+"  if exists("g:jellybeans_background_color_256")
+"    let s:overrides["background"]["256ctermbg"] = g:jellybeans_background_color_256
+"  endif
+"
+"  if exists("g:jellybeans_use_term_background_color")
+"    \ && g:jellybeans_use_term_background_color
+"    let s:overrides["background"]["ctermbg"] = "NONE"
+"    let s:overrides["background"]["256ctermbg"] = "NONE"
+"  endif
+"endif
 
 if exists("g:jellybeans_use_lowcolor_black") && g:jellybeans_use_lowcolor_black
   let s:termBlack = "Black"
@@ -416,11 +416,11 @@ fun! s:X(group, fg, bg, attr, lcfg, lcbg)
 endfun
 " }}}
 
-call s:X("Normal","e8e8d3",s:background_color,"","White","")
+"call s:X("Normal","e8e8d3",s:background_color,"","White","")
 set background=dark
 
 call s:X("CursorLine","","1c1c1c","","",s:termBlack)
-call s:X("CursorColumn","","1c1c1c","","",s:termBlack)
+"call s:X("CursorColumn","","1c1c1c","","",s:termBlack)
 
 " Some of Terminal.app's default themes have a cursor color
 " too close to Jellybeans' preferred MatchParen background
@@ -456,9 +456,9 @@ call s:X("Pmenu","ffffff","606060","","White",s:termBlack)
 call s:X("PmenuSel","101010","eeeeee","",s:termBlack,"White")
 
 call s:X("Visual","","404040","","",s:termBlack)
-call s:X("Cursor",s:background_color,"b0d0f0","","","")
+"call s:X("Cursor",s:background_color,"b0d0f0","","","")
 
-call s:X("LineNr","605958",s:background_color,"NONE",s:termBlack,"")
+"call s:X("LineNr","605958",s:background_color,"NONE",s:termBlack,"")
 call s:X("CursorLineNr","ccc5c4","","NONE","White","")
 call s:X("Comment","888888","","italic","Grey","")
 call s:X("Todo","c7c7c7","","bold","White",s:termBlack)
@@ -492,7 +492,7 @@ hi! link Operator Structure
 hi! link Conceal Operator
 
 call s:X("Type","ffb964","","","Yellow","")
-call s:X("NonText","606060",s:background_color,"",s:termBlack,"")
+"call s:X("NonText","606060",s:background_color,"",s:termBlack,"")
 
 call s:X("SpecialKey","444444","1c1c1c","",s:termBlack,"")
 
