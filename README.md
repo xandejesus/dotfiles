@@ -9,3 +9,4 @@
     a new instance of Unix or Linux on another computer. It has the bash_profile, <br/>
     the bashrc and the vimrc that I need because I'm a noob. </p>
     
+	https://github.com/jimeh/tmux-themepack
