@@ -458,7 +458,7 @@ call s:X("PmenuSel","101010","eeeeee","",s:termBlack,"White")
 call s:X("Visual","","404040","","",s:termBlack)
 "call s:X("Cursor",s:background_color,"b0d0f0","","","")
 
-"call s:X("LineNr","605958",s:background_color,"NONE",s:termBlack,"")
+call s:X("LineNr","797d7f","","NONE",s:termBlack,"")
 call s:X("CursorLineNr","ccc5c4","","NONE","White","")
 call s:X("Comment","888888","","italic","Grey","")
 call s:X("Todo","c7c7c7","","bold","White",s:termBlack)
