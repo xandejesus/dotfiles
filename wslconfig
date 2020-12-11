@@ -8,6 +8,7 @@
                 "useAcrylic" : true,
                 "acrylicOpacity" : 0.75
                 // Where my backgroundImages are: %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState
+		// Terminal Preview: %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\RoamingState
                 // backgroundImage" : "ms-appdata:///roaming/yourimage.jpg
                 //"backgroundImageOpacity" : 0.75,
 				//"backgroundImageStretchMode" : "fill"
