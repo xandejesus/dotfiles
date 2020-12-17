@@ -1,5 +1,5 @@
 {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "guid": "{3c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": false,
                 "colorScheme" : "One Half Dark",
                 "name": "Ubuntu",
@@ -13,4 +13,22 @@
                 //"backgroundImageOpacity" : 0.75,
 				//"backgroundImageStretchMode" : "fill"
                 //, "startingDirectory" : "//wsl$/Ubuntu-18.04/home" 
+            },           {
+                
+                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+                "hidden": false,
+                "colorScheme" : "One Half Dark",
+                "name": "Debian",
+                "source": "Windows.Terminal.Wsl",
+                "closeOnExit" : true,
+                "useAcrylic" : true,
+                "acrylicOpacity" : 0.75,
+                "fontFace" : "DejaVu Sans Mono for Powerline",
+                "fontWeight" : "semi-bold",
+                // Where my backgroundImages are: %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState
+                // C:\Users\Xander\AppData\Local\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\RoamingState
+                "backgroundImage" : "ms-appdata:///roaming/aflkgjasfldkgj",
+                "backgroundImageOpacity" : 0.75,
+                "backgroundImageStretchMode" : "uniformToFill",
+                //"startingDirectory" : "//wsl$/Debian/home/xandej"
             },
