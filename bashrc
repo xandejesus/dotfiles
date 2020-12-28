@@ -2,14 +2,19 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc) 
 # for examples 
  
-export PS1="\[\033[95m\] [ \[\033[39m\]\u\[\033[96m\]@\[\033[95m\]\h\[\033[96;1m\] \w \[\033[95m\]]\[\033[39m\]\$ "
-export LS_COLORS='di=36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;46:ow=30;43'
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+export PS1="\[\033[95m\] [ \[\033[39m\]\u\[\033[96m\]@\[\033[95m\]\h\[\033[96;1m\] \w \[\033[95m\]]\[\033[39m\]\[\e[92m\]\$(parse_git_branch)\[\e[00m\]$ "
+#export PS1="\[\033[95m\] [ \[\033[39m\]\u\[\033[96m\]@\[\033[95m\]\h\[\033[96;1m\] \w \[\033[95m\]]\[\033[39m\]\$ "
+
+export LS_COLORS='di=37:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;46:ow=30;43'
 export LSCOLORS='gxfxcxdxbxegedabagacad'
 
 #Linux vs Mac
 
-#alias ls='ls --color=auto -X -l'
-alias ls='ls -l -G'
+alias ls='ls --color=auto -X -l'
+#alias ls='ls -l -G'
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
