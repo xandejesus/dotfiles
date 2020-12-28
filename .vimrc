@@ -53,19 +53,19 @@ cnoremap WE w<bar>e
 nnoremap vv <C-v>
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
+"Plugin 'VundleVim/Vundle.vim'
 "Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'mbbill/undotree'
+"Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'octol/vim-cpp-enhanced-highlight'
+"Plugin 'mbbill/undotree'
 "Plugin 'python-syntax'
 "Plugin 'vim-template'
 "Plugin 'numirias/semshi'
 "Plugin 'Rigellute/shades-of-purple.vim'
 "Plugin 'gruvbox-community/gruvbox'
-call vundle#end()
+"call vundle#end()
 filetype plugin indent on
 
 let g:airline_powerline_fonts = 1
