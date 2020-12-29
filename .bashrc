@@ -44,7 +44,9 @@ case $- in
       *) return;;
 esac
 
-alias tmux="TERM=screen-256color-bce tmux"
+alias tmux='tmux -2'
+#alias tmux="TERM=screen-256color-bce tmux"
+export TERM=screen-256color
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
