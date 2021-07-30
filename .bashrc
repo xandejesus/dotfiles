@@ -25,7 +25,8 @@ git_colorscheme() {
 git_directory(){
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-export PS1="\[\033[96m\] [ \[\033[34m\]\u\[\033[39m\]@\[\033[96m\]\h\[\033[39m\] \w \[\033[96m\]]\[\033[39m\]\[\e[\$(git_colorscheme)\]\$(git_directory)\[\e[00m\]$ "
+export PS1="\[\033[95m\] [ \[\033[39m\]\u\[\033[96m\]@\[\033[95m\]\h\[\033[96;1m\] \w \[\033[95m\]]\[\033[39m\]\[\e[\$(git_colorscheme)\]\$(git_directory)\[\e[00m\]$ "
+#export PS1="\[\033[96m\] [ \[\033[34m\]\u\[\033[39m\]@\[\033[96m\]\h\[\033[39m\] \w \[\033[96m\]]\[\033[39m\]\[\e[\$(git_colorscheme)\]\$(git_directory)\[\e[00m\]$ "
 #export PS1="\[\033[96m\] [ \[\033[39m\]\u\[\033[96m\]@\[\033[95m\]\h\[\033[96;1m\] \w \[\033[95m\]]\[\033[39m\]\$ "
 
 #export LS_COLORS='di=37:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;46:ow=30;43'
@@ -36,8 +37,8 @@ export LS_OPTIONS='--color-auto'
 
 #Linux vs Mac
 
-alias ls='ls --color=auto -X -l'
-#alias ls='ls -l -G'
+#alias ls='ls --color=auto -X -l'
+alias ls='ls -l -G'
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -57,3 +58,7 @@ shopt -s histappend
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 
 export TERM="xterm-256color"
+export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"

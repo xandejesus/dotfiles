@@ -60,7 +60,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   endif
   "hi Normal guifg=#ffffff guibg=#1f1f24 guisp=NONE gui=NONE cterm=NONE
   hi Cursor guifg=#1f1f24 guibg=#ffffff guisp=NONE gui=NONE cterm=NONE
-  hi None guifg=#fffdd0 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+  hi None guifg=#ffffff guibg=NONE guisp=NONE gui=NONE cterm=NONE
   hi CursorLineNr guifg=#ffffff guibg=NONE guisp=NONE gui=NONE cterm=NONE
   "hi EndOfBuffer guifg=#1f1f24 guibg=#1f1f24 guisp=NONE gui=NONE cterm=NONE
   hi FoldColumn guifg=#52555c guibg=NONE guisp=NONE gui=NONE cterm=NONE
@@ -104,7 +104,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   hi Number guifg=#d9c668 guibg=NONE guisp=NONE gui=NONE cterm=NONE
   hi SpecialComment guifg=#aeb7c0 guibg=NONE guisp=NONE gui=NONE cterm=NONE
   hi String guifg=#ff8a7a guibg=NONE guisp=NONE gui=NONE cterm=NONE
-  hi Title guifg=#fffdd0 guibg=NONE guisp=NONE gui=bold cterm=bold
+  hi Title guifg=#ffffff guibg=NONE guisp=NONE gui=bold cterm=bold
   hi Todo guifg=#aeb7c0 guibg=NONE guisp=NONE gui=bold cterm=bold
   hi Underlined guifg=#6bdfff guibg=NONE guisp=NONE gui=underline cterm=underline
   hi SpellBad guifg=NONE guibg=NONE guisp=NONE gui=undercurl ctermfg=NONE ctermbg=NONE cterm=undercurl

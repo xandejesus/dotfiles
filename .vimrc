@@ -43,11 +43,13 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set textwidth=80
+set wrap linebreak
 
 call plug#begin('~/.vim-plugged')
 
 Plug 'junegunn/goyo.vim'
-
+Plug 'aperezdc/vim-template'
 call plug#end()
 
 autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -o %:r<CR>
@@ -66,3 +68,4 @@ if (has("termguicolors"))
  endif
 
 colorscheme xcodedarkhc
+highlight NonText ctermfg=8
