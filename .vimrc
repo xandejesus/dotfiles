@@ -36,8 +36,8 @@ set autoindent
 set tabstop=4
 set shiftwidth=4
 set cindent
-set nonumber
-"set number relativenumber
+set number
+set number relativenumber
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
@@ -46,11 +46,6 @@ set incsearch
 set textwidth=80
 set wrap linebreak
 
-call plug#begin('~/.vim-plugged')
-
-Plug 'junegunn/goyo.vim'
-Plug 'aperezdc/vim-template'
-call plug#end()
 
 autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -o %:r<CR>
 autocmd filetype cpp nnoremap <F10> :!./%:r<CR>
@@ -68,4 +63,4 @@ if (has("termguicolors"))
  endif
 
 colorscheme xcodedarkhc
-highlight NonText ctermfg=8
+highlight EndOfBuffer ctermfg=12

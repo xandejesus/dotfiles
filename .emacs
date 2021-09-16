@@ -27,10 +27,10 @@
 
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
-(use-package kaolin-themes
- :config
- (load-theme 'kaolin-temple t))
-
+;(use-package kaolin-themes
+; :config
+; (load-theme 'kaolin-temple t))
+;
 
 
 (custom-set-variables
@@ -39,9 +39,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("d516f1e3e5504c26b1123caa311476dc66d26d379539d12f9f4ed51f10629df3" "a131602c676b904a5509fff82649a639061bf948a5205327e0f5d1559e04f5ed" "11cc65061e0a5410d6489af42f1d0f0478dbd181a9660f81a692ddc5f948bf34" "f00a605fb19cb258ad7e0d99c007f226f24d767d01bf31f3828ce6688cbdeb22" "3c7a784b90f7abebb213869a21e84da462c26a1fda7e5bd0ffebf6ba12dbd041" "06ed754b259cb54c30c658502f843937ff19f8b53597ac28577ec33bb084fa52" default))
+   (quote
+    ("d516f1e3e5504c26b1123caa311476dc66d26d379539d12f9f4ed51f10629df3" "a131602c676b904a5509fff82649a639061bf948a5205327e0f5d1559e04f5ed" "11cc65061e0a5410d6489af42f1d0f0478dbd181a9660f81a692ddc5f948bf34" "f00a605fb19cb258ad7e0d99c007f226f24d767d01bf31f3828ce6688cbdeb22" "3c7a784b90f7abebb213869a21e84da462c26a1fda7e5bd0ffebf6ba12dbd041" "06ed754b259cb54c30c658502f843937ff19f8b53597ac28577ec33bb084fa52" default)))
  '(package-selected-packages
-   '(pdf-tools kaolin-themes evil-visual-mark-mode evil use-package)))
+   (quote
+    (pdf-tools kaolin-themes evil-visual-mark-mode evil use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -77,3 +79,18 @@
   :ensure t)
 
 (electric-indent-mode 0)
+(custom-set-faces
+
+ '(term-color-black ((t (:foreground "#3F3F3F" :background "#2B2B2B"))))
+ '(term-color-red ((t (:foreground "#AC7373" :background "#8C5353"))))
+ '(term-color-green ((t (:foreground "#7F9F7F" :background "#9FC59F"))))
+ '(term-color-yellow ((t (:foreground "#DFAF8F" :background "#9FC59F"))))
+ '(term-color-blue ((t (:foreground "#7CB8BB" :background "#4C7073"))))
+ '(term-color-magenta ((t (:foreground "#DC8CC3" :background "#CC9393"))))
+ '(term-color-cyan ((t (:foreground "#93E0E3" :background "#8CD0D3"))))
+ '(term-color-white ((t (:foreground "#DCDCCC" :background "#656555"))))
+
+ '(term-default-fg-color ((t (:inherit term-color-white))))
+ '(term-default-bg-color ((t (:inherit term-color-black))))
+
+ )
